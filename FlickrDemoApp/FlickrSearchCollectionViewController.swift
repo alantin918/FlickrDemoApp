@@ -6,6 +6,11 @@
 //  Copyright © 2019 weilun. All rights reserved.
 //
 
+//protocol HomeDelegate: NSObjectProtocol {
+//    func userDoneInput(text: String)
+//}
+
+
 import UIKit
 
 private let reuseIdentifier = "Cell"
@@ -13,25 +18,40 @@ private let reuseIdentifier = "Cell"
 //private let itemsPerRow: CGFloat = 3
 
 class FlickrSearchCollectionViewController: UICollectionViewController {
+
+//    var homeDelegate: HomeDelegate?
+    let apiKey = "13d06d53446547f65aa8ede22777a7f5"
+    var queryString: String = ""
+    var page: String = ""
     
-    let apiKey = "a35c883530bbe53c6db409d2a493991e"
+    
     
     var photos = [Photo]()
+
+//    func changeDisplay() {
+//        if let queryString = productName, let text = explainText, let image = imageName{
+//            navigationItem.title = name
+//            explainLabel.text = text
+//        }
+//    }
     
     func fetchData() {
         
-        if let url = URL(string: "https://www.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=1") {
-            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-                if let data = data, let searchData = try? JSONDecoder().decode(SearchData.self, from: data) {
-                    self.photos = searchData.photos.photo
-                    DispatchQueue.main.async {
-                        self.collectionView.reloadData()
+        print("text: \(queryString)")
+        print("page: \(page)")
+    
+            if let url = URL(string: "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(apiKey)&%20format=json&nojsoncallback=1&safe_search=1&per_page=\(page)&text=\(queryString)") {
+                let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                    if let data = data, let searchData = try? JSONDecoder().decode(SearchData.self, from: data) {
+                        self.photos = searchData.photos.photo
+                        DispatchQueue.main.async {
+                            self.collectionView.reloadData()
+                    }
                     }
                 }
                 
-            }
+                task.resume()
             
-            task.resume()
         }
         
     }
@@ -39,22 +59,17 @@ class FlickrSearchCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tabBarController?.tabBar.isHidden = false
         
         let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout
         let width = (view.bounds.width - 10) / 2
         layout?.itemSize = CGSize(width: width, height: width + 80)
         fetchData()
+        
+//        print("text: \(queryString)")
+//        print("page: \(page)")
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using [segue destinationViewController].
-     // Pass the selected object to the new view controller.
-     }
-     */
     
     // MARK: UICollectionViewDataSource
     
@@ -173,3 +188,13 @@ class FlickrSearchCollectionViewController: UICollectionViewController {
 //    }
 //}
 
+extension FlickrSearchCollectionViewController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        if let viewControllers = tabBarController.viewControllers {
+            if viewController == viewControllers[0] {
+                return false
+            }
+        }
+        return true
+    }
+}
