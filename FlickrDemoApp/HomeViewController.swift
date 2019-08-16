@@ -35,6 +35,11 @@ class HomeViewController: UIViewController,UITextFieldDelegate{
         perPage.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
 //        self.navigationItem.title = "搜尋輸入頁"
         self.tabBarController?.tabBar.isHidden = true
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

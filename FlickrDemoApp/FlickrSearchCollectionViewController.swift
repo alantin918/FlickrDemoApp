@@ -24,8 +24,6 @@ class FlickrSearchCollectionViewController: UICollectionViewController {
     var queryString: String = ""
     var page: String = ""
     
-    
-    
     var photos = [Photo]()
 
 //    func changeDisplay() {
@@ -66,10 +64,22 @@ class FlickrSearchCollectionViewController: UICollectionViewController {
         layout?.itemSize = CGSize(width: width, height: width + 80)
         fetchData()
         
+        self.navigationItem.title = "搜尋結果 \(queryString)"
+        
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(addTapped))
+//        self.navigationController?.navigatio22nBar
 //        print("text: \(queryString)")
 //        print("page: \(page)")
     }
     
+//    @objc func addTapped() {
+////        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+////        let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "home") as! HomeViewController
+//        if let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "home") {
+//            homeVC.navigationController?.isNavigationBarHidden = false
+//            self.present(homeVC, animated: true, completion: nil) }
+//    }
+//
     
     // MARK: UICollectionViewDataSource
     

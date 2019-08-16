@@ -13,21 +13,19 @@
         <!--搜尋輸入頁-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="FlickrDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" id="BYZ-38-t0r" customClass="HomeViewController" customModule="FlickrDemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="每頁呈現數量" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ys-vq-CLu">
-                                <rect key="frame" x="41" y="250" width="237" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="每頁呈現數量" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ys-vq-CLu">
+                                <rect key="frame" x="50" y="284" width="220" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AD-xR-CSr">
-                                <rect key="frame" x="41" y="304" width="237" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AD-xR-CSr">
+                                <rect key="frame" x="50" y="354" width="220" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="搜尋"/>
@@ -36,15 +34,28 @@
                                     <segue destination="eJL-yA-wW0" kind="show" identifier="PhotoSegue" id="wlS-EQ-jgr"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="欲搜尋內容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IAR-Lv-vKo">
-                                <rect key="frame" x="41" y="201" width="237" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="欲搜尋內容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IAR-Lv-vKo">
+                                <rect key="frame" x="50" y="214" width="220" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IAR-Lv-vKo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="2Mu-mX-FRE"/>
+                            <constraint firstItem="6AD-xR-CSr" firstAttribute="top" secondItem="9Ys-vq-CLu" secondAttribute="bottom" constant="40" id="55b-DU-tb5"/>
+                            <constraint firstItem="IAR-Lv-vKo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bth-nO-XnH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6AD-xR-CSr" secondAttribute="trailing" constant="50" id="F5W-9L-Egf"/>
+                            <constraint firstItem="9Ys-vq-CLu" firstAttribute="top" secondItem="IAR-Lv-vKo" secondAttribute="bottom" constant="40" id="HHJ-sW-jvl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IAR-Lv-vKo" secondAttribute="trailing" constant="50" id="LHd-o8-l1m"/>
+                            <constraint firstItem="6AD-xR-CSr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nak-vO-HRp"/>
+                            <constraint firstItem="IAR-Lv-vKo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="PXK-PM-hRi"/>
+                            <constraint firstItem="6AD-xR-CSr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="QxF-bj-LAo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Ys-vq-CLu" secondAttribute="trailing" constant="50" id="Yyq-M0-Cwu"/>
+                            <constraint firstItem="9Ys-vq-CLu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="pF2-JK-bqq"/>
+                            <constraint firstItem="9Ys-vq-CLu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xwM-1Y-TH7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="CFF-Xt-chF"/>
@@ -59,11 +70,11 @@
             </objects>
             <point key="canvasLocation" x="2446.875" y="111.97183098591549"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="yJg-fO-alS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lr4-Eg-6ee" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="jJ7-re-1LU"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="jJ7-re-1LU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bdi-Sf-qjJ">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -193,11 +204,11 @@
             </objects>
             <point key="canvasLocation" x="900" y="113"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="t3H-M1-Mj9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q0c-lD-BG6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="k2D-aA-Wta"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="k2D-aA-Wta"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E4X-Wu-ijQ">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
