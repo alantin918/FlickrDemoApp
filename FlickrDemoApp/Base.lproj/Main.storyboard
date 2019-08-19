@@ -89,7 +89,7 @@
             </objects>
             <point key="canvasLocation" x="1695" y="112"/>
         </scene>
-        <!--My Favorite Collection View Controller-->
+        <!--我的最愛-->
         <scene sceneID="UT5-oN-Mn7">
             <objects>
                 <collectionViewController id="Cq2-Hf-rgz" customClass="myFavoriteCollectionViewController" customModule="FlickrDemoApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -151,7 +151,7 @@
                             <outlet property="delegate" destination="Cq2-Hf-rgz" id="gUE-8e-UVs"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="ga5-Q2-Lhx"/>
+                    <navigationItem key="navigationItem" title="我的最愛" id="ga5-Q2-Lhx"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gr1-Nd-2Hy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
