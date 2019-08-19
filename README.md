@@ -11,7 +11,7 @@
 
 tabbar 第一分頁：搜尋結果頁
 兩個輸入框改變flickr做API Request，再用URLSession、JSONDecoder來顯示圖片。
-另外，可無限滑動，會顯示、標題："搜尋結果 + Text"以及可按"加入收藏"。
+另外，可無限滑動，會顯示標題："搜尋結果 + Text"以及可按"加入收藏"。
 進入搜尋結果頁後，出現tabbar(實作navigationController，按"搜尋輸入頁"可回上一頁，tabbar會消失。)
 
 tabbar 第二分頁：我的最愛
