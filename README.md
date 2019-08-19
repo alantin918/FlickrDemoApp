@@ -4,9 +4,9 @@
 <img width="207" height="448" src="https://github.com/alantin918/FlickrDemoApp/blob/master/Simulator3.png">/
 <img width="207" height="448" src="https://github.com/alantin918/FlickrDemoApp/blob/master/Simulator2.png">/
 
-首頁：搜尋輸入頁 /n
-有兩個輸入框，1.搜尋的輸入匡(Text) 2.每頁要呈現的數量的輸入匡(Per Page) /n
-要兩個輸入框都有輸入文字才可以按button(以顏色區別，灰色不能按，藍色可以按。) /n
+首頁：搜尋輸入頁 \n
+有兩個輸入框，1.搜尋的輸入匡(Text) 2.每頁要呈現的數量的輸入匡(Per Page) \n
+要兩個輸入框都有輸入文字才可以按button(以顏色區別，灰色不能按，藍色可以按。) \n
 輸入以prepare、segue傳值到下一頁
 
 tabbar 第一分頁：搜尋結果頁-串接Flickr API /n
