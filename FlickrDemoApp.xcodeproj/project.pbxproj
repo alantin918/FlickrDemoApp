@@ -15,7 +15,6 @@
 		6829177E2302CBA300044A3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6829177C2302CBA300044A3A /* LaunchScreen.storyboard */; };
 		682917862303094E00044A3A /* SearchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682917852303094E00044A3A /* SearchData.swift */; };
 		682917882303098300044A3A /* NetworkUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682917872303098300044A3A /* NetworkUtility.swift */; };
-		6829178A230309A800044A3A /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68291789230309A800044A3A /* FeedData.swift */; };
 		6829178C23030B3C00044A3A /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6829178B23030B3C00044A3A /* PhotoCollectionViewCell.swift */; };
 		6829178E2303DEB700044A3A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6829178D2303DEB700044A3A /* HomeViewController.swift */; };
 		686713802306A36900389DE9 /* myFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6867137F2306A36900389DE9 /* myFavoriteViewController.swift */; };
@@ -33,7 +32,6 @@
 		6829177F2302CBA300044A3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		682917852303094E00044A3A /* SearchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchData.swift; sourceTree = "<group>"; };
 		682917872303098300044A3A /* NetworkUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtility.swift; sourceTree = "<group>"; };
-		68291789230309A800044A3A /* FeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
 		6829178B23030B3C00044A3A /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		6829178D2303DEB700044A3A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6867137F2306A36900389DE9 /* myFavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myFavoriteViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 				682917852303094E00044A3A /* SearchData.swift */,
 				682917872303098300044A3A /* NetworkUtility.swift */,
 				6829178B23030B3C00044A3A /* PhotoCollectionViewCell.swift */,
-				68291789230309A800044A3A /* FeedData.swift */,
 				68BC3909230A690B0012C194 /* Manager.swift */,
 			);
 			path = FlickrDemoApp;
@@ -164,7 +161,6 @@
 				686713802306A36900389DE9 /* myFavoriteViewController.swift in Sources */,
 				682917712302CB9B00044A3A /* AppDelegate.swift in Sources */,
 				6829178E2303DEB700044A3A /* HomeViewController.swift in Sources */,
-				6829178A230309A800044A3A /* FeedData.swift in Sources */,
 				6829178C23030B3C00044A3A /* PhotoCollectionViewCell.swift in Sources */,
 				68BC390A230A690B0012C194 /* Manager.swift in Sources */,
 				682917862303094E00044A3A /* SearchData.swift in Sources */,

@@ -8,14 +8,11 @@
 
 import UIKit
 
-//private let reuseIdentifier = "Cell"
-
 class PhotoCollectionViewCell: UICollectionViewCell {
         @IBOutlet weak var photoImageView: UIImageView!
         @IBOutlet weak var titleLabel: UILabel!
-        var imageURL: URL!
     
-//    var myphotos: Photo!
+        var imageURL: URL!
     
     @IBAction func myfavoriteBtn(_ sender: Any) {
     
@@ -32,7 +29,6 @@ class PhotoCollectionViewCell: UICollectionViewCell {
                 do{
 
                     try imageData.write(to: fileURL, options: [.atomicWrite])
-//                    self.myphotos.imageName = fileName
                     print("Success!")
                 }catch{
                     print("error \(error)")

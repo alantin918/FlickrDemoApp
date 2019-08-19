@@ -64,9 +64,6 @@ class FlickrSearchCollectionViewController: UICollectionViewController {
         
     }
     
-    
-
-    
     // MARK: UICollectionViewDataSource
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

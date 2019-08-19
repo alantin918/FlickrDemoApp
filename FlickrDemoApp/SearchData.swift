@@ -10,8 +10,6 @@ import Foundation
 
 struct Photo: Decodable {
    
-//    var imageName: String
-    
     let farm: Int
     let secret: String
     let id: String

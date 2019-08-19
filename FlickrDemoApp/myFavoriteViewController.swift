@@ -1,10 +1,3 @@
-//
-//  myFavoriteViewController.swift
-//  FlickrDemoApp
-//
-//  Created by weilun on 2019/8/16.
-//  Copyright © 2019 weilun. All rights reserved.
-//
 
 import UIKit
 
