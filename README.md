@@ -13,6 +13,7 @@
 可無限滑動，會顯示圖片與標題。
 
 進入搜尋結果頁後，出現tabbar(製作navigationbar，按"搜尋輸入頁"回上一頁，tabbar會消失。)
+
 cell可加入收藏的功能存至本地端(存至NSHomeDirectory()，再將本地的圖片讀取出來。)
 
 tabbar另一個分頁：我的最愛
