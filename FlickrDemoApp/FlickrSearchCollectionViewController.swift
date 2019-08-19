@@ -14,24 +14,13 @@
 import UIKit
 
 private let reuseIdentifier = "Cell"
-//private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
-//private let itemsPerRow: CGFloat = 3
 
 class FlickrSearchCollectionViewController: UICollectionViewController {
 
-//    var homeDelegate: HomeDelegate?
     let apiKey = "13d06d53446547f65aa8ede22777a7f5"
     var queryString: String = ""
     var page: String = ""
-    
     var photos = [Photo]()
-
-//    func changeDisplay() {
-//        if let queryString = productName, let text = explainText, let image = imageName{
-//            navigationItem.title = name
-//            explainLabel.text = text
-//        }
-//    }
     
     func fetchData() {
         
@@ -42,6 +31,7 @@ class FlickrSearchCollectionViewController: UICollectionViewController {
                 let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
                     if let data = data, let searchData = try? JSONDecoder().decode(SearchData.self, from: data) {
                         self.photos = searchData.photos.photo
+                        
                         DispatchQueue.main.async {
                             self.collectionView.reloadData()
                     }
@@ -61,27 +51,27 @@ class FlickrSearchCollectionViewController: UICollectionViewController {
         
         let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout
         let width = (view.bounds.width - 10) / 2
+//        let width = self.view.frame.size.width - 30
         layout?.itemSize = CGSize(width: width, height: width + 80)
         fetchData()
+        layout?.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout?.minimumLineSpacing = CGFloat(integerLiteral: 0)
+        layout?.minimumInteritemSpacing = CGFloat(integerLiteral: 0)
+        
+        collectionView.reloadData()
         
         self.navigationItem.title = "搜尋結果 \(queryString)"
         
-//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(addTapped))
-//        self.navigationController?.navigatio22nBar
-//        print("text: \(queryString)")
-//        print("page: \(page)")
     }
     
-//    @objc func addTapped() {
-////        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-////        let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "home") as! HomeViewController
-//        if let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "home") {
-//            homeVC.navigationController?.isNavigationBarHidden = false
-//            self.present(homeVC, animated: true, completion: nil) }
-//    }
-//
+    
+
     
     // MARK: UICollectionViewDataSource
+    
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
@@ -108,103 +98,5 @@ class FlickrSearchCollectionViewController: UICollectionViewController {
         return cell
     }
     
-    // MARK: UICollectionViewDelegate
-    
-    /*
-     // Uncomment this method to specify if the specified item should be highlighted during tracking
-     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-     return true
-     }
-     */
-    
-    /*
-     // Uncomment this method to specify if the specified item should be selected
-     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-     return true
-     }
-     */
-    
-    /*
-     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-     override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-     return false
-     }
-     
-     override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-     return false
-     }
-     
-     override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-     
-     }
-     */
-    
 }
 
-//extension FlickrSearchCollectionViewController : UICollectionViewDelegateFlowLayout {
-//    //1
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        //2
-//        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
-//        let availableWidth = view.frame.width - paddingSpace
-//        let widthPerItem = availableWidth / itemsPerRow
-//
-//        return CGSize(width: widthPerItem, height: widthPerItem)
-//    }
-//
-//    //3
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return sectionInsets
-//    }
-//
-//    // 4
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return sectionInsets.left
-//    }
-//}
-
-//extension FlickrSearchCollectionViewController : UITextFieldDelegate {
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        // 1
-//        let activityIndicator = UIActivityIndicatorView(style: .gray)
-//        textField.addSubview(activityIndicator)
-//        activityIndicator.frame = textField.bounds
-//        activityIndicator.startAnimating()
-//
-//        flickr.searchFlickr(for: textField.text!) { searchResults in
-//            activityIndicator.removeFromSuperview()
-//
-//            switch searchResults {
-//            case .error(let error) :
-//                print("Error Searching: \(error)")
-//            case .results(let results):
-//                print("Found \(results.searchResults.count) matching \(results.searchTerm)")
-//                self.searches.insert(results, at: 0)
-//
-//                // 4
-//                self.collectionView?.reloadData()
-//            }
-//        }
-//
-//        textField.text = nil
-//        textField.resignFirstResponder()
-//        return true
-//    }
-//}
-
-extension FlickrSearchCollectionViewController: UITabBarControllerDelegate {
-    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        if let viewControllers = tabBarController.viewControllers {
-            if viewController == viewControllers[0] {
-                return false
-            }
-        }
-        return true
-    }
-}
