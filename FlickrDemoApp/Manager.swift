@@ -18,7 +18,7 @@ class Manager {
         }
     }
     
-    func getPhoto(imageName :String?) -> UIImage? {
+    func getPhoto(imageName: String?) -> UIImage? {
         if let fileName = imageName {
             let homeURL = URL(fileURLWithPath: NSHomeDirectory())
             let documents = homeURL.appendingPathComponent("Documents")

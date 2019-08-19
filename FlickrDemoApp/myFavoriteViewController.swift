@@ -7,13 +7,8 @@ class myFavoriteCollectionViewController: UICollectionViewController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
         Manager.shared.getphotoNameArray()
     }
-    
-    var myphotos = [String]()
-    var itemcount = [String]()
-    var imageName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
