@@ -5,6 +5,7 @@
 <img width="207" height="448" src="https://github.com/alantin918/FlickrDemoApp/blob/master/Simulator2.png">/
 
 首頁：搜尋輸入頁
+
 有兩個輸入框，1.搜尋的輸入匡(Text) 2.每頁要呈現的數量的輸入匡(Per Page)
 要兩個輸入框都有輸入文字才可以按button(以顏色區別，灰色不能按，藍色可以按。)
 輸入以prepare、segue傳值到下一頁
