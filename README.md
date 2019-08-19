@@ -1,6 +1,6 @@
 # FlickrDemoApp
 
-![image](<img width="150" height="150" src="https://github.com/alantin918/FlickrDemoApp/blob/master/Simulator1.png">)
+![image](<img width="150" height="150" src="https://github.com/alantin918/FlickrDemoApp/blob/master/Simulator1.png">/)
 ![image](https://github.com/alantin918/FlickrDemoApp/blob/master/Simulator2.png)
 ![image](https://github.com/alantin918/FlickrDemoApp/blob/master/Simulator3.png)
 
