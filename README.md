@@ -1,8 +1,8 @@
 # FlickrDemoApp
 
-<img width="414" height="896" src="https://github.com/alantin918/FlickrDemoApp/blob/master/Simulator1.png">/
-<img width="414" height="896" src="https://github.com/alantin918/FlickrDemoApp/blob/master/Simulator2.png">/
-<img width="414" height="896" src="https://github.com/alantin918/FlickrDemoApp/blob/master/Simulator3.png">/
+<img width="207" height="448" src="https://github.com/alantin918/FlickrDemoApp/blob/master/Simulator1.png">/
+<img width="207" height="448" src="https://github.com/alantin918/FlickrDemoApp/blob/master/Simulator2.png">/
+<img width="207" height="448" src="https://github.com/alantin918/FlickrDemoApp/blob/master/Simulator3.png">/
 
 第一頁：搜尋輸入頁
 有兩個輸入框，1.搜尋的輸入匡(Text) 2.每頁要呈現的數量的輸入匡(Per Page)
